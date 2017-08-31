@@ -82,7 +82,7 @@ public class CheeseController {
         Category cat = categoryDao.findOne(catId);
 
         model.addAttribute("cheeses", cat.getCheeses());
-        model.addAttribute("title", "Cheeses of category " + cat.getName());
+        model.addAttribute("title", cat.getName() + " cheeses");
 
         return "cheese/index";
     }

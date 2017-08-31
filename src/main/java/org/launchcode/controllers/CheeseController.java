@@ -76,4 +76,15 @@ public class CheeseController {
         return "redirect:";
     }
 
+    @RequestMapping(value = "category", method = RequestMethod.GET)
+    public String category(Model model, @RequestParam("id") int catId) {
+
+        Category cat = categoryDao.findOne(catId);
+
+        model.addAttribute("cheeses", cat.getCheeses());
+        model.addAttribute("title", "Cheeses of category " + cat.getName());
+
+        return "cheese/index";
+    }
+
 }

@@ -38,4 +38,8 @@ public class AddMenuItemForm {
     public int getCheeseId() {
         return cheeseId;
     }
+
+    public void setCheeseId(int cheeseId) {
+        this.cheeseId = cheeseId;
+    }
 }
